@@ -1,0 +1,7 @@
+## License
+
+This work is dual-licensed under Mozilla Public License Version 2.0 (Code) and
+Creative Commons Attribution license CC-BY 4.0 (text). You can choose between
+one of them if you use this work.
+
+`SPDX-License-Identifier: Mozilla Public License Version 2.0 OR Creative Commons Attribution license CC-BY 4.0`
