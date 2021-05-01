@@ -14,8 +14,8 @@ These Jupyter notebooks assume that the user is familiar with basic Python conce
 
 To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)
 
-- [Loading data from DICe output](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb?flush_cache=true)
-- [Visualizing strain and strain analysis](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb?flush_cache=true)
+- [Loading data from DICe output](https://github.com/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb)
+- [Visualizing strain and strain analysis]([Jupyter4DICe/Strain_analysis.ipynb at main · marcoalopez/Jupyter4DICe (github.com)](https://github.com/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb))
 - [Visualizing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/displacements.ipynb?flush_cache=true)
 - [Assessing and visualizing the quality of the solution](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true)
 
@@ -42,17 +42,17 @@ A popular software distribution that includes the Jupyter notebook is the [Anaco
 >>> conda install numpy pandas matplotlib jupyter ipython jupyterlab astropy 
 ```
 
-Jupyter notebooks can be launched by open the Anaconda navigator (if you installed Anaconda) and launching the _Jupyter lab_ (preferred option) or the _Jupyter notebook_ or, more quickly, from the terminal (_Anaconda prompt_) typing ``jupyter notebook`` or ``jupyter lab``. Then, you'll see the application opening in one of your browser tabs. If you prefer a standalone application instead of your browser to open and interact with the notebooks you can install https://code.visualstudio.com/ and add the *Python* and *Jupyter* plug-ins.
+Jupyter notebooks can be launched by open the Anaconda navigator (if you installed Anaconda) and launching the _Jupyter lab_ (preferred option) or the _Jupyter notebook_ or, more quickly, from the terminal (_Anaconda prompt_) typing ``jupyter notebook`` or ``jupyter lab``. Then, you'll see the application opening in one of your browser tabs. If you prefer a standalone application to interact with the notebooks you can install https://code.visualstudio.com/ and add the *Python* and *Jupyter* plug-ins.
 
 ### How to contribute to this project?
 
 The GitHub website hosting the project provides several options (you will need a GitHub account, it’s free!):
 
-- Open a [discussion](https://github.com/marcoalopez/strength_envelopes/discussions): This is a place to:
+- Open a [discussion](https://github.com/marcoalopez/Jupyter4DICe/discussions): This is a place to:
   - Ask questions you are wondering about.
   - Share ideas.
   - Engage with the developers (still just me).
-- Open and [issue](https://github.com/marcoalopez/strength_envelopes/issues): This is a place to track bugs or requests for specific features on the notebooks.
-- Create a [pull request](https://github.com/marcoalopez/strength_envelopes/pulls): You modified, corrected or added a feature to one of the notebooks and send it for one of the developers to review it and add it to the main page.
+- Open and [issue](https://github.com/marcoalopez/Jupyter4DICe/issues): This is a place to track bugs or requests for specific features on the notebooks.
+- Create a [pull request](https://github.com/marcoalopez/Jupyter4DICe/pulls): You modified, corrected or added a feature to one of the notebooks and send it for one of the developers to review it and add it to the main page.
 
-Besides, if you want to contribute to the project, you might want to glimpse at the [code of conduct](https://github.com/marcoalopez/strength_envelopes/blob/master/CODE_OF_CONDUCT.md) (TLDR: be nice to others 😉).  
+Besides, if you want to contribute to the project, you might want to glimpse at the [code of conduct](https://github.com/marcoalopez/Jupyter4DICe/blob/main/CODE_OF_CONDUCT.md) (TLDR: be nice to others 😉).  
