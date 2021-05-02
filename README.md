@@ -1,9 +1,9 @@
 # Jupyter4DICe
-_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/05/2
+_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/05/3
 
 ## What is this?
 
-[Jupyter4DICe](https://github.com/marcoalopez/Jupyter4DICe) is a series of [Jupyter notebooks](https://jupyter.org/) written in Python for post-processing digital image correlation (DIC) data, in particular for DIC processing data obtained with the open source digital image correlation tool [DICe](https://github.com/dicengine/dice). Although the DICe tool already produces a file that can be viewed directly with a visualisation application called Paraview, the use of Jupyter notebooks has two main advantages over this approach:
+[Jupyter4DICe](https://github.com/marcoalopez/Jupyter4DICe) is a series of [Jupyter notebooks](https://jupyter.org/) written in Python for post-processing digital image correlation (DIC) data, in particular for DIC processing data obtained with the open-source digital image correlation tool [DICe](https://github.com/dicengine/dice). Although the DICe tool already produces a file that can be viewed directly with a visualisation application called Paraview, the use of Jupyter notebooks has two main advantages over this approach:
 
 - it is more versatile
 - it allows you to record and detail all post-processing steps, which is advantageous for the reproducibility of the results. For example, this allows you to create a complete step-by-step report that you can use as supplementary material in your publications.
@@ -15,7 +15,7 @@ These Jupyter notebooks assume that the user is familiar with basic Python conce
 To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)
 
 - [Loading data from DICe output](https://github.com/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb)
-- [Visualizing strain and strain analysis]([Jupyter4DICe/Strain_analysis.ipynb at main · marcoalopez/Jupyter4DICe (github.com)](https://github.com/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb))
+- [Visualizing strain and strain analysis](https://github.com/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb)
 - [Visualizing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/displacements.ipynb?flush_cache=true)
 - [Assessing and visualizing the quality of the solution](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true)
 
@@ -55,4 +55,15 @@ The GitHub website hosting the project provides several options (you will need a
 - Open and [issue](https://github.com/marcoalopez/Jupyter4DICe/issues): This is a place to track bugs or requests for specific features on the notebooks.
 - Create a [pull request](https://github.com/marcoalopez/Jupyter4DICe/pulls): You modified, corrected or added a feature to one of the notebooks and send it for one of the developers to review it and add it to the main page.
 
-Besides, if you want to contribute to the project, you might want to glimpse at the [code of conduct](https://github.com/marcoalopez/Jupyter4DICe/blob/main/CODE_OF_CONDUCT.md) (TLDR: be nice to others 😉).  
+Besides, if you want to contribute to the project, you might want to glimpse at the [code of conduct](https://github.com/marcoalopez/Jupyter4DICe/blob/main/CODE_OF_CONDUCT.md) (TLDR: be nice to others 😉).
+
+
+
+---
+
+*Copyright © 2021 Marco A. Lopez-Sanchez*  
+
+*Information presented on this website and the documentation of the script is provided without any express or implied warranty and may include technical inaccuracies or typing errors; the author reserve the right to modify or enhance the content of this website as well as the documentation of the script at any time without previous notice. This webpage and the documentation is not liable for the content of external links.*  
+
+*Hosted on GitHub Pages — This website was created with [Typora](https://typora.io/)*
+
