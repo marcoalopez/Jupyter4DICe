@@ -1,6 +1,8 @@
 # Jupyter4DICe
 _This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/05/3
 
+> Important: At present, this project is in a pre-alpha state and the Jupyter notebooks are not yet ready. Please be patient, they will be available soon.
+
 ## What is this?
 
 [Jupyter4DICe](https://github.com/marcoalopez/Jupyter4DICe) is a series of [Jupyter notebooks](https://jupyter.org/) written in Python for post-processing digital image correlation (DIC) data, in particular for DIC processing data obtained with the open-source digital image correlation tool [DICe](https://github.com/dicengine/dice). Although the DICe tool already produces a file that can be viewed directly with a visualisation application called Paraview, the use of Jupyter notebooks has two main advantages over this approach:
@@ -15,9 +17,9 @@ These Jupyter notebooks assume that the user is familiar with basic Python conce
 To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)
 
 - [Loading data from DICe output](https://github.com/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb)
-- [Visualizing strain and strain analysis](https://github.com/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb)
-- [Visualizing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/displacements.ipynb?flush_cache=true)
-- [Assessing and visualizing the quality of the solution](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true)
+- [Visualizing strain and strain analysis]() TODO
+- [Visualizing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/displacements.ipynb?flush_cache=true) TODO
+- [Assessing and visualizing the quality of the solution](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true) TODO
 
 ## FAQs
 
