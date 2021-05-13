@@ -1,7 +1,7 @@
 # Jupyter4DICe
-_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/05/4
+_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/05/13
 
-> Important: This project is in a pre-alpha state and the Jupyter notebooks are not yet ready. Please be patient, they will be available soon.
+> Important: This project is in a pre-alpha state and the Jupyter notebooks are not yet ready (unless otherwise indicated). Please be patient, they will be available soon.
 
 ## What is this?
 
@@ -16,7 +16,7 @@ These notebooks assume that the user is familiar with basic Python concepts (dat
 
 To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)
 
-- [Loading data from DICe output](https://github.com/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb)
+- [Loading data from DICe output](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb) (finished!)
 - [Visualizing strain and strain analysis]() TODO
 - [Visualizing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/displacements.ipynb?flush_cache=true) TODO
 - [Assessing and visualizing the quality of the solution](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true) TODO
