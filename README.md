@@ -8,7 +8,7 @@ _This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.gith
 [Jupyter4DICe](https://github.com/marcoalopez/Jupyter4DICe) is a series of [Jupyter notebooks](https://jupyter.org/) written in Python for post-processing digital image correlation (DIC) data obtained with the open-source digital image correlation [DICe tool](https://github.com/dicengine/dice). Although the DICe tool already produces a file that can be viewed directly with a visualisation application called Paraview, the use of Jupyter notebooks has two main advantages over this approach:
 
 - it is more versatile
-- it allows you to record and detail all post-processing steps, which is advantageous for the reproducibility. For example, this allows you to create a complete step-by-step report that you can use as supplementary material in your scientific publications.
+- it allows you to record and detail all post-processing steps, which is advantageous for reproducibility. For example, this allows you to create a complete step-by-step report that you can use as supplementary material in your scientific publications.
 
 These notebooks assume that the user is familiar with basic Python concepts (data types, loops, conditionals, functions, modules), and the Numpy (particularly multidimensional array indexing) and Matplotlib (for plotting) libraries.
 
@@ -16,7 +16,7 @@ These notebooks assume that the user is familiar with basic Python concepts (dat
 
 To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)
 
-- [Loading data from DICe output](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb) (finished!)
+- [Loading data from DICe output](https://github.com/marcoalopez/Jupyter4DICe/blob/7e87ad20012f75d22898516dfe308459f65bce9a/notebooks/LoadingDICe_data.ipynb) (finished!)
 - [Visualizing strain and strain analysis]() TODO
 - [Visualizing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/displacements.ipynb?flush_cache=true) TODO
 - [Assessing and visualizing the quality of the solution](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true) TODO
