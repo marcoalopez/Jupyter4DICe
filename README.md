@@ -17,7 +17,7 @@ These notebooks assume that the user is familiar with basic Python concepts (dat
 To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)
 
 - [Loading data from DICe output](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/f277d346a009570cf645123dc8fa93f7a0eea4f4/notebooks/LoadingDICe_data.ipynb) (Done)
-- [Visualizing strain and strain analysis](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/0b28103432e378354824086ba26278d4d4e25bd6/notebooks/Strain_analysis.ipynb) (working on it!)
+- [Visualizing strain and strain analysis](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/633bbb92db8f615cff5dd68f33d2595ec8d5355e/notebooks/Strain_analysis.ipynb) (working on it!)
 - [Visualizing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/displacements.ipynb?flush_cache=true) (TODO!)
 - [Assessing and visualizing the quality of the DIC solution](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true) (TODO!)
 
