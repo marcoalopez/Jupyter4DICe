@@ -1,5 +1,5 @@
 # Jupyter4DICe
-_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/05/27
+_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/06/01
 
 > Important: This project is in a pre-alpha state and the Jupyter notebooks are not yet ready (unless otherwise indicated). Please be patient, they will be available soon.
 
@@ -17,7 +17,7 @@ These notebooks assume that the user is familiar with basic Python concepts (dat
 To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)
 
 - [Loading data from DICe output](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/f277d346a009570cf645123dc8fa93f7a0eea4f4/notebooks/LoadingDICe_data.ipynb) (Done)
-- [Visualizing and assessing strain](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/07db7bc400c7a8da549dcef440077e3d2624bab0/notebooks/Strain_analysis.ipynb) (working on it!)
+- [Visualizing and assessing strain](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/c5f0d5f11e8ac83fb0bbee634081d855add6cd46/notebooks/Strain_analysis.ipynb) (working on it!)
 - [Visualizing and assessing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/displacements.ipynb?flush_cache=true) (TODO!)
 - [How to assess and visualise the quality of the DIC solution and clean the dataset](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true) (TODO!)
 
