@@ -1,16 +1,16 @@
 # Jupyter4DICe
 _This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/06/18
 
-> Important: This project is in a pre-alpha state and the Jupyter notebooks are not yet ready (unless otherwise indicated). Please be patient, they will be available soon.
+> Important: This project is in alpha state and most Jupyter notebooks are not yet ready (unless otherwise indicated). Please be patient, they will be available soon.
 
 ## What is this?
 
-[Jupyter4DICe](https://github.com/marcoalopez/Jupyter4DICe) is a series of [Jupyter notebooks](https://jupyter.org/) written in Python for post-processing digital image correlation (DIC) data obtained with the open-source digital image correlation [DICe tool](https://github.com/dicengine/dice). Although the DICe tool already produces a file that can be viewed directly with a visualisation application called Paraview, the use of Jupyter notebooks has two main advantages over this approach:
+[Jupyter4DICe](https://github.com/marcoalopez/Jupyter4DICe) is a series of [Jupyter notebooks](https://jupyter.org/) written in Python for post-processing digital image correlation (DIC) data obtained with the open-source digital image correlation [DICe tool](https://github.com/dicengine/dice). Although the DICe tool already produces a file that can be viewed directly with an application called Paraview, the use of Jupyter notebooks has two main advantages over this approach:
 
 - it is more versatile
 - it allows you to record and detail all post-processing steps, which is advantageous for reproducibility. For example, this allows you to create a complete step-by-step report that you can use as supplementary material in your scientific publications.
 
-These notebooks assume that the user is familiar with basic Python concepts (data types, loops, conditionals, functions, modules), and the Numpy (particularly multidimensional array indexing) and Matplotlib (for plotting) libraries.
+These notebooks assume that the user is familiar with basic Python concepts (data types, loops, conditionals, functions, modules), and the Numpy (particularly multidimensional array indexing) and Matplotlib (for plotting) libraries. The goal of these notebooks is to keep dependencies to a minimum, only using well-established Python libraries, to avoid future compatibility problems. All ad hoc methods used for the DIC data treatment are contained within the notebooks.
 
 ### The notebooks
 
@@ -25,7 +25,7 @@ To visualize the content of the notebooks as a website just click on the topic y
 
 ### What is digital image correlation?
 
-Digital image correlation is an image-based method that uses image recording and tracking techniques to make accurate 2D (or 3D) full-field measurements during the deformation of a sample. Tracking coordinate fields allows the user to estimate different parameters of interest such as [displacement](https://en.wikipedia.org/wiki/Displacement_field_(mechanics)) (motion), [strains](https://en.wikipedia.org/wiki/Strain_(materials_science)), strain rates, particle velocities, etc. The technique is non-contact, usually inexpensive, and can be applied at virtually any scale (from [nanometric](https://doi.org/10.1016/j.actamat.2020.05.029) to [plate tectonic](https://doi.org/10.1007/s11340-014-9893-z) scales), becoming increasingly common in many areas of science and engineering. In mechanical tests, the amount of information collected compared to [strain gauges](https://en.wikipedia.org/wiki/Strain_gage) such as extensometers is increased due to the ability to provide both local (full field) and average (mean field) information. More information on DIC at https://www.idics.org/
+Digital image correlation is an image-based method that uses digital image recording and tracking techniques to make accurate 2D (or 3D) full-field measurements during the deformation of a sample. Tracking coordinate fields allows the user to estimate different parameters of interest such as [displacement](https://en.wikipedia.org/wiki/Displacement_field_(mechanics)) (motion), [strains](https://en.wikipedia.org/wiki/Strain_(materials_science)), strain rates, particle velocities, etc. The technique is non-contact, usually inexpensive, and can be applied at virtually any scale (from [nanometric](https://doi.org/10.1016/j.actamat.2020.05.029) to [plate tectonic](https://doi.org/10.1007/s11340-014-9893-z) scales), becoming increasingly common in many areas of science and engineering. In mechanical tests, the amount of information collected compared to [strain gauges](https://en.wikipedia.org/wiki/Strain_gage) such as extensometers is increased due to the ability to provide both local (full field) and average (mean field) information. More information on DIC at https://www.idics.org/
 
 ### What is a Jupyter notebook and how to use it?
 
@@ -44,7 +44,7 @@ A popular software distribution that includes the Jupyter notebook is the [Anaco
 >>> conda install numpy pandas matplotlib scipy jupyter ipython jupyterlab astropy 
 ```
 
-Jupyter notebooks can be launched by open the Anaconda navigator (if you installed Anaconda) and launching the _Jupyter lab_ (preferred option) or the _Jupyter notebook_ or, more quickly, from the terminal (_Anaconda prompt_) typing ``jupyter lab`` or  ``jupyter notebook``. Then, you'll see the application opening in your browser. If you prefer a standalone application to interact with the notebooks you can install https://code.visualstudio.com/ and add the *Python* and *Jupyter* plug-ins.
+Jupyter notebooks can be launched from the terminal (_Anaconda prompt_) typing ``jupyter lab`` or  ``jupyter notebook``. Also, by open the Anaconda navigator (if you installed Anaconda) and launching the _Jupyter lab_ or the _Jupyter notebook_. Then, you'll see the application opening in your browser. If you prefer a standalone application to interact with the notebooks you can install https://code.visualstudio.com/, which is completely free, and add the *Python* and *Jupyter* plug-ins.
 
 ### How to contribute to this project?
 
