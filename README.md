@@ -18,7 +18,7 @@ To visualize the content of the notebooks as a website just click on the topic y
 
 - [Loading data from DICe output](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb) (Done) / [View on Deepnote](https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb)
 - [Visualizing and assessing strain](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/7691f954f531427cbd040aeaabc81208f17dfd69/notebooks/Strain_analysis.ipynb) (working on it!) / [View on Deepnote](https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb)
-- [Visualizing and assessing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/displacements.ipynb?flush_cache=true) (TODO!)
+- [Visualizing and assessing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/24dc818212c3b12139f421712aa60f1572298ad2/notebooks/Displacement_analysis.ipynb) (TODO!)
 - [How to assess and visualise the quality of the DIC solution and clean the dataset](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true) (TODO!)
 
 ## FAQs
