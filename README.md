@@ -1,5 +1,5 @@
 # Jupyter4DICe
-_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/06/18
+_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/07/02
 
 > Important: This project is in alpha state and most Jupyter notebooks are not yet ready (unless otherwise indicated). Please be patient, they will be available soon.
 
@@ -17,8 +17,8 @@ These notebooks assume that the user is familiar with basic Python concepts (dat
 To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)
 
 - [Loading data from DICe output](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb) (Done) / [View on Deepnote](https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb)
-- [Visualizing and assessing strain](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/7691f954f531427cbd040aeaabc81208f17dfd69/notebooks/Strain_analysis.ipynb) (working on it!) / [View on Deepnote](https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb)
-- [Visualizing and assessing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/24dc818212c3b12139f421712aa60f1572298ad2/notebooks/Displacement_analysis.ipynb) (TODO!)
+- [Visualizing and assessing strain](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/e6d8cff7f10fa08c8c0bce8899bc54e474209b34/notebooks/Strain_analysis.ipynb) (working on it!) / [View on Deepnote](https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb)
+- [Visualizing and assessing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/24dc818212c3b12139f421712aa60f1572298ad2/notebooks/Displacement_analysis.ipynb) (working on it!) / [View on Deepnote](https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Displacement_analysis.ipynb)
 - [How to assess and visualise the quality of the DIC solution and clean the dataset](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true) (TODO!)
 
 ## FAQs
