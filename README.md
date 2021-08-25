@@ -1,7 +1,7 @@
 # Jupyter4DICe
-_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/07/02
+_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/08/25
 
-> Important: This project is in alpha state and most Jupyter notebooks are not yet ready (unless otherwise indicated). Please be patient, they will be available soon.
+> Important: This project is in beta state and most Jupyter notebooks are not yet finished (unless otherwise indicated).
 
 ## What is this?
 
