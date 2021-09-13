@@ -1,7 +1,7 @@
 # Jupyter4DICe
-_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/08/25
+_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2021/09/13
 
-> Important: This project is in beta state and most Jupyter notebooks are not yet finished (unless otherwise indicated).
+> Important: This project is in beta stage and most Jupyter notebooks are not yet finished (unless otherwise indicated).
 
 ## What is this?
 
@@ -59,7 +59,9 @@ The GitHub website hosting the project provides several options (you will need a
 
 Besides, if you want to contribute to the project, you might want to glimpse at the [code of conduct](https://github.com/marcoalopez/Jupyter4DICe/blob/main/CODE_OF_CONDUCT.md) (TLDR: be nice to others 😉).
 
+### Is it necessary to use DICe tool to use the notebooks?
 
+No. We encourage the use of this software because it is free and open source and allows the whole process to be traceable and reproducible, but the DIC data processing shown in the Jupyter notebooks is generally applicable. You would only need to import the data from the output files of your DIC software of choice.
 
 ---
 
