@@ -61,7 +61,7 @@ Besides, if you want to contribute to the project, you might want to glimpse at 
 
 ### Is the DICe tool required to use the notebooks?
 
-Not necessarily. We encourage the use of this software because it is free and open source and allows the whole process to be traceable and reproducible, but the DIC data processing shown in the Jupyter notebooks is generally applicable. You would only need to import the data from the output files of your DIC software of choice.
+Not necessarily. We encourage the use of this software because it is free and open-source and allows the whole process to be traceable and reproducible, but the data processing shown in the notebooks is generally applicable. You would only need to import the data from the output files of your DIC software of choice.
 
 ---
 
