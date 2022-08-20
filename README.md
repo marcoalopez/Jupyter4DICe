@@ -1,7 +1,7 @@
 # Jupyter4DICe
-_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2022/04/04
+_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2022/08/20
 
-> Important: This project is in beta stage and most Jupyter notebooks are not yet finished (unless otherwise indicated).
+> 🚨 This project is in development stage and most Jupyter notebooks are not yet finished (unless otherwise indicated).
 
 ## What is this?
 
@@ -65,7 +65,7 @@ Not necessarily. We encourage the use of this software because it is free and op
 
 ---
 
-*Copyright © 2021 Marco A. Lopez-Sanchez*  
+*Copyright © 2022 Marco A. Lopez-Sanchez*  
 
 *Information presented on this website and the documentation of the script is provided without any express or implied warranty and may include technical inaccuracies or typing errors; the author reserve the right to modify or enhance the content of this website as well as the documentation of the script at any time without previous notice. This webpage and the documentation is not liable for the content of external links.*  
 
