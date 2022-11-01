@@ -1,16 +1,16 @@
 # Jupyter4DICe
-_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2022/08/25
+_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2022/11/01
 
-> 🚨 This project is in development stage and most Jupyter notebooks are not yet finished (unless otherwise indicated).
+> 🚨 This project is in development and the Jupyter notebooks are not yet finished although many of the examples contained are fully usable.
 
 ## What is this?
 
-[Jupyter4DICe](https://github.com/marcoalopez/Jupyter4DICe) is a series of [Jupyter notebooks](https://jupyter.org/) written in Python for post-processing digital image correlation (DIC) data obtained with the open-source digital image correlation [DICe tool](https://github.com/dicengine/dice). Although the DICe tool already produces a file that can be viewed directly with an application called Paraview, the use of Jupyter notebooks has two main advantages over this approach:
+[Jupyter4DICe](https://github.com/marcoalopez/Jupyter4DICe) is a series of [Jupyter notebooks](https://jupyter.org/) written in Python for post-processing digital image correlation (DIC) data obtained with the open-source digital image correlation [DICe tool](https://github.com/dicengine/dice). Although the DICe tool already produces a file that can be viewed directly with an application called Paraview, the use of Jupyter notebooks has two main advantages:
 
 - it is more versatile
 - it allows you to record and detail all post-processing steps, which is advantageous for reproducibility. For example, this allows you to create a complete step-by-step report that you can use as supplementary material in your scientific publications.
 
-These notebooks assume that the user is familiar with basic Python concepts (data types, loops, conditionals, functions, modules), and the Numpy (particularly multidimensional array indexing) and Matplotlib (for plotting) libraries. The goal of these notebooks is to keep dependencies to a minimum, only using well-established Python libraries, to avoid future compatibility problems. All ad hoc methods used for the DIC data treatment are contained within the notebooks.
+These notebooks assume that the user is familiar with basic Python concepts (data types, loops, conditionals, functions, modules), and the Numpy and Matplotlib libraries. The goal of these notebooks is to keep dependencies to a minimum to avoid future compatibility problems, using only well-manteined Python libraries. All _ad hoc_ methods used for the DIC data treatment are contained within the notebooks.
 
 ### The notebooks
 
@@ -25,7 +25,7 @@ To visualize the content of the notebooks as a website just click on the topic y
 
 ### What is digital image correlation?
 
-Digital image correlation is an image-based method that uses digital image recording and tracking techniques to make accurate 2D (or 3D) full-field measurements during the deformation of a sample. Tracking coordinate fields allows the user to estimate different parameters of interest such as [displacement](https://en.wikipedia.org/wiki/Displacement_field_(mechanics)) (motion), [strains](https://en.wikipedia.org/wiki/Strain_(materials_science)), strain rates, particle velocities, etc. The technique is non-contact, usually inexpensive, and can be applied at virtually any scale (from [nanometric](https://doi.org/10.1016/j.actamat.2020.05.029) to [plate tectonic](https://doi.org/10.1007/s11340-014-9893-z) scales), becoming increasingly common in many areas of science and engineering. In mechanical tests, the amount of information collected compared to [strain gauges](https://en.wikipedia.org/wiki/Strain_gage) such as extensometers is increased due to the ability to provide both local (full field) and average (mean field) information. More information on DIC at https://www.idics.org/
+Digital image correlation is an image-based method that uses digital image recording and tracking techniques to make accurate 2D (or 3D) full-field measurements during the deformation of a sample. Tracking coordinate fields allows the user to estimate different parameters of interest such as [displacement](https://en.wikipedia.org/wiki/Displacement_field_(mechanics)) (motion), [strains](https://en.wikipedia.org/wiki/Strain_(materials_science)), strain rates, particle velocities, etc. The technique is non-contact, usually inexpensive, and can be applied at virtually any scale (from [nano](https://doi.org/10.1016/j.actamat.2020.05.029) to [kilometric](https://doi.org/10.1007/s11340-014-9893-z) scales), becoming increasingly common in many areas of science and engineering. In mechanical tests, the amount of information collected compared to [strain gauges](https://en.wikipedia.org/wiki/Strain_gage) such as extensometers is increased due to the ability to provide both local (full field) and average (mean field) information. More useful information at https://www.idics.org/
 
 ### What is a Jupyter notebook and how to use it?
 

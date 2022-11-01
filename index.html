@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
@@ -199,6 +199,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
 
 
 .CodeMirror { height: auto; }
@@ -282,55 +283,138 @@ span.cm-strikethrough { text-decoration: line-through; }
 }
 
 
+/* roboto-300 - latin */
+/* roboto-300italic - latin */
+/* roboto-regular - latin */
+/* roboto-italic - latin */
+/* roboto-500 - latin */
+/* roboto-500italic - latin */
+/* roboto-700 - latin */
+/* roboto-700italic - latin */
+/* roboto-900 - latin */
+/* roboto-900italic - latin */
+/* sorucecodepro-400 - latin */
+@font-face {
+     font-family: 'Source Code Pro';
+     font-style: normal;
+     font-weight: 400;
+     src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+     url('file:///C://Users//Marco//AppData//Roaming//Typora/themes/gitbook/SourceCodePro-Regular.ttf') format('truetype');
+}@import "";
+
+/*by 16soundsofsilence, yes this code is an absolute mess*/
+
 :root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
+    --bg-color: white;
+    --side-bar-bg-color: #f5f7f9;
+    --control-text-color: #3b454e;
+    --primary-color: #15ac8e;
+    --primary-btn-border-color: #15ac8e;
+    --active-file-bg-color: #e6ecf1;
+    --active-file-text-color: inherit;
+    --active-file-border-color: #15ac8e;
+    --item-hover-text-color: #242a31;
+    --item-hover-bg-color: #f5f7f9;
+    --window-border: 1px solid #e6ecf1;
+    --select-text-font-color: white;
+    --select-text-bg-color: #11977d;
+
+    --md-char-color: #9daab6;
+    --heading-char-color: #9daab6;
+    --meta-content-color: #15ac8e;
+
+    --borders: #e6ecf1;
+    --table-border-color: #e6ecf1;
+    --boxes: #f5f7f9;
+    --boxes-darker: #d8e0e7;
+    --boxes-darker2: #bac2c9;
+    --boxes-darkest: #9daab6;
+    --drag-placeholder-color: #d8e0e7;
+
+    --text-color: #3b454e;
+    --heading-text-color: #242a31;
+    --light-text-color: #9daab6;
+    --light-text-color-darker: #74818d;
+    --codeboxes: #183055;
+    --codeboxes-lighter: #1c375f;
+    --rawblock-edit-panel-bd: transparent;
+
+    --primary-color-darkest: #083d33;
+    --primary-color-darker2: #0d5748;
+    --primary-color-darker: #11977d;
+    --focus-ring-color: #15ac8e;
+
+    --danger-color: rgb(255, 70, 66);
+
+    --node-fill: #ececff;
+    --node-border: #ccccff;
+    --cluster-fill: #ffffde;
+    --cluster-border: #aaaa33;
+    --note-fill: #fff5ad;
+    --note-border: #aaaa33;
+
+    /*****************************/
+
+    --font-family: "Roboto", sans-serif;
+    --code-font-family: "Source Code Pro";
+    --monospace: "Source Code Pro";
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
+html,
+.form-control,
+.modal {
     font-size: 16px;
-    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
+    background: var(--bg-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: #3b454e;
+    line-height: 1.6rem;
+    height: 100%;
 }
 
 #write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
+    font-size: 0.95rem;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 30px;
     padding-bottom: 100px;
-}
-
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 900px;
-	}
-}
-
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 900px;
-	}
+    position: static;
+    width: 100%;
 }
 
 #write > ul:first-child,
-#write > ol:first-child{
+#write > ol:first-child {
     margin-top: 30px;
 }
 
 a {
-    color: #4183C4;
+    color: var(--primary-color);
+    text-decoration: none !important;
+    transition-duration: 0.2s;
+    transition-property: color;
 }
+
+a:hover {
+    color: var(--primary-color-darker);
+}
+
+mark a,
+mark .md-content.md-url {
+    color: var(--primary-color-darker2);
+}
+
+mark a:hover {
+    color: var(--primary-color-darkest);
+}
+
+.ty-preferences a {
+    color: var(--primary-color);
+}
+
 h1,
 h2,
 h3,
@@ -338,12 +422,10 @@ h4,
 h5,
 h6 {
     position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
+    color: var(--heading-text-color);
     cursor: text;
 }
+
 h1:hover a.anchor,
 h2:hover a.anchor,
 h3:hover a.anchor,
@@ -352,89 +434,171 @@ h5:hover a.anchor,
 h6:hover a.anchor {
     text-decoration: none;
 }
+
 h1 tt,
 h1 code {
     font-size: inherit;
 }
+
 h2 tt,
 h2 code {
     font-size: inherit;
 }
+
 h3 tt,
 h3 code {
     font-size: inherit;
 }
+
 h4 tt,
 h4 code {
     font-size: inherit;
 }
+
 h5 tt,
 h5 code {
     font-size: inherit;
 }
+
 h6 tt,
 h6 code {
     font-size: inherit;
 }
+
 h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
+    border-bottom: solid 1px var(--borders);
 }
+
 h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
 }
-
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
 
 h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
+
 h4 {
-    font-size: 1.25em;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
+
 h5 {
-    font-size: 1em;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
+
 h6 {
-   font-size: 1em;
-    color: #777;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
+
+#write > h1.md-focus:before {
+    content: "h1";
+    top: 1.15rem;
+    left: -1.75rem;
+}
+
+#write > h2.md-focus:before {
+    content: "h2";
+    top: 0.75rem;
+    left: -1.75rem;
+}
+
+#write > h3.md-focus:before {
+    content: "h3";
+    top: 0.575rem;
+    left: -1.75rem;
+}
+
+#write > h4.md-focus:before {
+    content: "h4";
+    top: 0.4rem;
+    left: -1.75rem;
+}
+
+#write > h5.md-focus:before {
+    content: "h5";
+    top: 0.25rem;
+    left: -1.75rem;
+}
+
+#write > h6.md-focus:before {
+    content: "h6";
+    top: 0.25rem;
+    left: -1.75rem;
+}
+
+#write > h1.md-focus:before,
+#write > h2.md-focus:before,
+#write > h3.md-focus:before,
+#write > h4.md-focus:before,
+#write > h5.md-focus:before,
+#write > h6.md-focus:before {
+    color: var(--light-text-color);
+    border: none;
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0px;
+    line-height: 1;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6 {
+    margin-top: 0rem;
+}
+
 p,
 blockquote,
 ul,
 ol,
-dl,
-table{
-    margin: 0.8em 0;
+dl {
+    margin: 0.5rem 0rem 1.5rem 0rem;
 }
-li>ol,
-li>ul {
+
+li > ol,
+li > ul {
     margin: 0 0;
 }
+
 hr {
-    height: 2px;
+    height: 1px;
     padding: 0;
     margin: 16px 0;
-    background-color: #e7e7e7;
+    background-color: var(--borders);
     border: 0 none;
     overflow: hidden;
     box-sizing: content-box;
@@ -443,147 +607,526 @@ hr {
 li p.first {
     display: inline-block;
 }
+
 ul,
 ol {
     padding-left: 30px;
 }
+
 ul:first-child,
 ol:first-child {
     margin-top: 0;
 }
+
 ul:last-child,
 ol:last-child {
     margin-bottom: 0;
 }
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
+
+.md-blockmeta {
+    color: var(--md-char-color);
 }
+
+mark {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/*BLOCKQUOTE*/
+
+blockquote {
+    width: 100%;
+    background-color: var(--boxes);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+
 blockquote blockquote {
     padding-right: 0;
 }
+
+/*TABLE*/
+
 table {
+    font-size: 0.875rem;
     padding: 0;
+    margin: 1.5rem 0;
     word-break: initial;
 }
+
 table tr {
-    border: 1px solid #dfe2e5;
+    border-top: 1px solid var(--borders);
+    border-bottom: 1px solid var(--borders);
     margin: 0;
     padding: 0;
 }
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
+
+table tr.md-end-block {
+    border-top: none;
 }
-table th {
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+table tr th {
     font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
+    border: none;
+    border-bottom: solid 2px var(--borders);
     margin: 0;
-    padding: 6px 13px;
+    padding: 10px 16px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
 }
-table td {
-    border: 1px solid #dfe2e5;
+
+table tr td {
+    border: none;
     margin: 0;
-    padding: 6px 13px;
+    padding: 10px 16px;
+    transition-duration: 0.3s;
+    transition-property: background-color;
 }
-table th:first-child,
-table td:first-child {
+
+#write table tr td:hover,
+#write table tr th:hover {
+    background-color: var(--boxes);
+}
+
+table tr th:first-child,
+table tr td:first-child {
     margin-top: 0;
 }
-table th:last-child,
-table td:last-child {
+
+table tr th:last-child,
+table tr td:last-child {
     margin-bottom: 0;
 }
 
-.CodeMirror-lines {
-    padding-left: 4px;
+/*OTHER TABLE THINGS*/
+
+.ty-table-edit {
+    background-color: var(--boxes);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    box-shadow: none;
+    transform: translateY(2.5rem);
+    transition-duration: 0.3s;
+    transition-property: opacity;
 }
 
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
+.ty-table-edit + .md-table {
+    margin-top: 3rem;
+}
+
+.ty-table-edit:active,
+.ty-table-edit:focus {
+    box-shadow: none;
+}
+
+.popover,
+.popover:active,
+.popover:focus {
+    border: solid 1px var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border-radius: 0.3rem;
+}
+
+.popover .arrow {
+    border-bottom-color: var(--borders);
+}
+
+.md-grid-board a {
+    background-color: transparent;
+    border-color: var(--borders);
+    border-radius: 2px;
+}
+
+.md-grid-board .md-grid-ext {
+    background-color: var(--borders);
+    border-radius: 2px;
+}
+
+.md-grid-board tr[row="1"] .md-grid-ext {
+    background: none;
+    border-radius: 6px;
+}
+
+.md-grid-board tr[row="1"] .md-grid-ext a {
+    background-color: var(--boxes-darker2);
+    border-color: var(--boxes-darker2);
+}
+
+.md-grid-board tr[row="1"] td {
+    background-color: var(--bg-color);
+    border-color: var(--borders);
+}
+
+.md-grid-board a.md-active,
+.md-grid-board a:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.md-grid-board tr[row="1"] a.md-active,
+.md-grid-board tr[row="1"] a:hover {
+    background-color: var(--primary-color-darker);
+    border-color: var(--primary-color-darker);
+}
+
+#md-grid-width,
+#md-grid-height {
+    border-radius: 0.3rem;
+    border-color: var(--borders);
+    transition-duration: 0.3s;
+    transition-property: border-color;
+}
+
+#md-grid-width:focus,
+#md-grid-height:focus {
+    border-radius: 0.3rem;
+    border-color: var(--primary-color);
+}
+
+/*CODE*/
+
+.CodeMirror {
+    padding: 1rem;
+    font-family: var(--code-font-family);
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    background-color: none;
+    border-right: none;
+    border-radius: 0px;
+    color: white;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+    border-left: solid 2px var(--light-text-color-darker);
+}
+
+.CodeMirror.cm-s-typora-default .CodeMirror-activeline-background {
+    background-color: var(--codeboxes-lighter);
+}
+
+.cm-s-inner .CodeMirror-cursor {
+    color: white;
+    border-left: solid 1px white;
+}
+
+.CodeMirror-linenumber {
+    color: var(--bg-color);
+    opacity: 0.6;
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line > span::selection,
+.cm-s-inner .CodeMirror-line > span::-moz-selection,
+.cm-s-inner .CodeMirror-line > span > span::selection,
+.cm-s-inner .CodeMirror-line > span > span::-moz-selection {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cm-error {
+    color: var(--danger-color);
+}
+
+.cm-s-inner span.cm-comment,
+.cm-s-typora-default span.cm-comment,
+.cm-s-typora-default span.cm-code {
+    color: #9daab6;
+}
+
+.cm-s-inner span.cm-string,
+.cm-s-inner span.cm-string-2 {
+    color: #71a7ff;
+}
+
+.cm-s-inner span.cm-number {
+    color: #ff9d3d;
+}
+
+.cm-s-inner span.cm-variable,
+.cm-s-inner span.cm-variable-2 {
+    color: white;
+}
+
+.cm-s-inner span.cm-def {
+    color: white;
+}
+
+.cm-s-inner span.cm-operator {
+    color: #ff9d3d;
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #61e3a5;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #bd93f9;
+}
+
+.cm-s-inner span.cm-meta {
+    color: #f8f8f2;
+}
+
+.cm-s-inner span.cm-link,
+.cm-s-typora-default .cm-link {
+    color: var(--primary-color);
+}
+
+.cm-s-inner span.cm-tag,
+.cm-s-inner .cm-header {
+    color: #b4f6d6;
+}
+
+.cm-s-inner span.cm-attribute {
+    color: #ff9d3d;
+}
+
+.cm-s-inner span.cm-qualifier,
+.cm-s-inner span.cm-type,
+.cm-s-inner span.cm-variable-3 {
+    color: #82ee9d;
+}
+
+.cm-s-inner span.cm-property {
+    color: #ffd6ad;
+}
+
+.cm-s-inner span.cm-builtin {
+    color: #8ffaaa;
+}
+
+.md-fences.md-focus .cm-s-inner .CodeMirror-activeline-background {
+    background: none;
+}
+
+.cm-s-inner .CodeMirror-selected,
+.cm-s-inner .CodeMirror-selectedtext {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cm-s-typora-default .cm-header,
+.cm-s-typora-default .cm-property {
+    color: white;
+    font-weight: 400;
+}
+
+.md-fences .code-tooltip {
+    box-shadow: rgba(116, 129, 141, 0.08) 0px 2px 6px 0px;
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 15rem;
+    height: 2.5rem;
+    bottom: -3rem;
+    padding: 0.1875rem;
+}
+
+.md-fences .code-tooltip .ty-input {
+    border: solid 1px var(--borders);
+    height: 2rem;
+    line-height: 2rem;
+    margin: 0rem;
+    padding-left: 0.5rem !important;
+    text-align: left;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    transition-duration: 0.3s;
+    transition-property: border;
+}
+
+.md-fences .code-tooltip .ty-input:focus {
+    border-color: var(--primary-color);
+}
+
+.html-for-mac .ty-cm-lang-input:empty:after {
+    left: 0.5rem;
+}
+
+.autoComplt-list li,
+.fences-auto-suggest li {
+    font-weight: 500;
+    transition-duration: 0.3s;
+    transition-property: background-color, color;
+}
+
+.autoComplt-list li.active,
+.fences-auto-suggest li:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
 }
 
 .md-fences,
-code,
 tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
+    border-radius: 0.3rem;
+    color: #ffffff;
+    padding: 1.5rem;
+    font-size: 0.8rem;
 }
 
 code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
+    padding: 0.2rem 0.4rem;
+    background-color: var(--borders);
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.md-fences .CodeMirror div.CodeMirror-cursor,
+#typora-source div.CodeMirror-cursor {
+    border-left: solid 1px white;
 }
 
 .md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     padding-top: 8px;
     padding-bottom: 6px;
+    background-color: var(--codeboxes);
 }
 
+#typora-source {
+    background-color: var(--codeboxes);
+    color: white;
+    font-size: 0.9rem;
+}
 
-.md-task-list-item > input {
-  margin-left: -1.3em;
+/*DIAGRAMS*/
+
+.md-diagram-panel {
+    color: var(--text-color);
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+}
+
+.md-diagram-panel text,
+.md-diagram-panel .label {
+    color: var(--text-color);
+}
+
+.md-diagram-panel text {
+    fill: var(--text-color) !important /*required*/;
+}
+
+.md-diagram-panel-error {
+    color: var(--danger-color);
+}
+
+/*CHECKBOXES*/
+
+.md-task-list-item > input:before,
+input[type="checkbox"]:before {
+    border-radius: 0.2rem;
+    margin-top: -0.08rem;
+    margin-left: -0.1rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--borders);
+    content: " ";
+    display: block;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+}
+
+.md-task-list-item:hover > input:before,
+input[type="checkbox"]:hover:before {
+    background-color: var(--boxes-darker);
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before,
+input[type="checkbox"]:checked:before {
+    background-color: var(--primary-color);
+}
+
+.md-task-list-item:hover > input:checked:before,
+.md-task-list-item:hover > input[checked]:before,
+input[type="checkbox"]:hover:checked:before {
+    background-color: var(--primary-color-darker);
+}
+
+.md-task-list-item > input:after,
+.md-task-list-item > input:after,
+input[type="checkbox"]:after {
+    transform: rotate(-45deg);
+    position: absolute;
+    border: 2px solid white;
+    border-top: 0;
+    border-right: 0;
+    top: 0.16rem;
+    left: 0.1rem;
+    width: 0.6rem;
+    height: 0.375rem;
+    content: " ";
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after,
+input[type="checkbox"]:checked:after {
+    opacity: 1;
+}
+
+.ty-preferences input[type="checkbox"]:before {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.ty-preferences input[type="checkbox"]:after {
+    width: 0.5rem;
+    height: 0.32rem;
+    top: 0.19rem;
+    left: 0.14rem;
 }
 
 @media print {
     html {
         font-size: 13px;
     }
+
+    table,
     pre {
         page-break-inside: avoid;
+    }
+
+    pre {
         word-wrap: break-word;
     }
 }
 
-.md-fences {
-	background-color: #f8f8f8;
-}
 #write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
+    padding: 1rem;
     line-height: 1.45;
-    background-color: #f7f7f7;
+    background-color: var(--boxes);
     border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+    border-left: solid 4px var(--boxes-darkest);
 }
 
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
+#write pre.md-meta-block:empty:before {
+    color: var(--light-text-color);
 }
 
-.md-mathjax-midline {
-    background: #fafafa;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
+.md-image > .md-meta {
     border-radius: 3px;
     padding: 2px 0px 0px 4px;
     font-size: 0.9em;
@@ -591,29 +1134,606 @@ code {
 }
 
 .md-tag {
-    color: #a7a7a7;
+    color: var(--md-char-color);
     opacity: 1;
 }
 
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
+/*TOC*/
+
+.md-toc {
+    margin: 1.5rem 0rem;
 }
 
-.sidebar-tabs {
-    border-bottom: none;
+.md-toc:focus .md-toc-content {
+    border: none;
+}
+
+#write div.md-toc-tooltip {
+    background-color: var(--boxes);
+    line-height: 1.6rem;
+    padding: 0.3rem 0.75rem;
+    border-top: none;
+    border-radius: 0.3rem;
+}
+
+.md-toc.md-focus {
+    margin-top: 4.5rem;
+}
+
+#write div.md-toc-tooltip + .md-toc-content {
+    padding-top: 1rem;
+}
+
+.md-delete-toc {
+    padding: 0px;
+}
+
+/*MATH*/
+
+.md-rawblock-container {
+    padding: 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.md-rawblock:hover .md-rawblock-container {
+    background-color: var(--boxes);
+}
+
+.md-rawblock:active .md-rawblock-container {
+    background-color: var(--boxes-darker);
+}
+
+.MathJax_SVG:focus {
+    outline: none;
+}
+
+.md-rawblock-panel,
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 0.3rem;
+    background-color: var(--boxes);
+}
+
+.md-rawblock-panel .code-tooltip {
+    box-shadow: none;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.md-rawblock-panel .CodeMirror-linenumber {
+    color: var(--light-text-color);
+    opacity: 1;
+}
+
+.md-rawblock-panel .CodeMirror div.CodeMirror-cursor {
+    border-left: solid 1px var(--text-color);
+}
+
+.md-mathblock-panel .md-mathjax-preview,
+.mathjax-candidate {
+    border-top: solid 1px var(--borders);
+}
+
+.md-rawblock-after,
+.md-rawblock-before {
+    cursor: default;
+    color: var(--light-text-color);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.md-rawblock-tooltip-name {
+    font-size: 13px;
+    color: var(--light-text-color);
+    opacity: 1;
+}
+
+.md-rawblock-on-edit > .md-rawblock-tooltip {
+    padding-right: 0px;
+}
+
+.md-rawblock-input span.cm-tag {
+    color: #0bb6ad;
+}
+
+.md-rawblock-input span.cm-atom,
+.md-inline-math script {
+    color: #b61ed4;
+}
+
+.md-rawblock-input span.cm-number {
+    color: #ec7200;
+}
+
+.md-rawblock-input span.cm-keyword {
+    color: #156db6;
+}
+
+.md-mathblock-input span.cm-bracket {
+    color: var(--light-text-color);
+}
+
+#math-inline-preview.code-tooltip {
+    border-radius: 0.3rem;
+    background-color: var(--bg-color);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    color: var(--text-color);
+    opacity: 1;
+}
+
+#math-inline-preview.code-tooltip .code-tooltip-content {
+    border: solid 1px var(--borders);
+}
+
+#math-inline-preview.code-tooltip .md-arrow:after {
+    background-color: var(--bg-color);
+    border: solid 1px var(--borders);
+    box-shadow: none;
+}
+
+/*FOOTER*/
+
+footer.ty-footer {
+    border: none;
+}
+
+.footer-item {
+    opacity: 1 !important;
+    color: var(--light-text-color);
+    transition: 0.3s;
+}
+
+.footer-item:hover {
+    color: var(--light-text-color-darker) !important;
+}
+
+#outline-btn:hover {
+    color: var(--light-text-color-darker) !important;
+}
+
+/*SIDEBAR*/
+
+#typora-sidebar {
+    border-right: solid 1px var(--borders);
+}
+
+.info-panel-tab {
+    opacity: 1;
+}
+
+.sidebar-tab {
+    text-transform: capitalize;
+    color: var(--light-text-color);
+}
+
+.info-panel-tab-border {
+    color: var(--primary-color);
+    border-radius: 2px;
+}
+
+#ty-sidebar-search-back-btn {
+    margin: auto;
+}
+
+.ty-show-outline-filter #file-library-search,
+.ty-show-search #file-library-search {
+    height: 4rem;
+}
+
+#file-library-search-input {
+    height: 2rem;
+}
+
+#file-library-search-panel input {
+    margin-top: 8px !important;
+}
+
+.ty-sidebar-search-panel .searchpanel-search-option-btn,
+#ty-sidebar-search-tabs .searchpanel-search-option-btn {
+    top: 15px;
+}
+
+#typora-sidebar #filesearch-case-ion-btn,
+#typora-sidebar #filesearch-word-ion-btn {
+    background: none;
+    margin-top: 0.45rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+#typora-sidebar #filesearch-case-ion-btn:hover,
+#typora-sidebar #filesearch-word-ion-btn:hover {
+    color: var(--primary-color);
+}
+
+/*sidebar loading*/
+
+#typora-sidebar #sidebar-loading-template {
+    padding: 0px;
+}
+
+#typora-sidebar #sidebar-loading-template .typora-search-spinner {
+    opacity: 1;
+    color: var(--light-text-color-darker);
+}
+
+#typora-sidebar #sidebar-loading-template .typora-quick-open-info {
+    color: var(--light-text-color-darker);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/*sidebar outline*/
+
+#close-outline-filter-btn {
+    top: 15px;
+    opacity: 1;
+    color: var(--light-text-color) !important;
+}
+
+#close-outline-filter-btn:hover {
+    color: var(--primary-color) !important;
+    background-color: transparent !important;
+}
+
+#close-outline-filter-btn:active {
+    background-color: transparent !important;
+}
+
+#outline-content {
+    padding-right: 0px;
+    line-height: 1rem;
+}
+
+.outline-item {
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.outline-item .outline-label {
+    display: block;
+    width: 100%;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    border-right: solid 2px transparent;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--light-text-color-darker);
+}
+
+.outline-item:hover {
+    background: none;
+}
+
+.outline-item:hover .outline-label {
+    color: var(--primary-color);
+}
+
+.outline-label:hover {
+    text-decoration: none;
+}
+
+.outline-active.outline-label {
+    border-right: solid 2px var(--primary-color);
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.outline-expander {
+    padding-top: 0.4rem;
+    padding-right: 0.5rem;
+}
+
+#toc-dropmenu .outline-label {
+    line-height: 1rem;
+}
+
+#toc .outline-title {
+    margin-top: 9px;
+    font-size: 1rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+#pin-outline-btn {
+    padding: 14px 18px 0px 0px;
+}
+
+/*sidebar file-list and search results*/
+
+#file-library-list[data-state="complete"] #sidebar-loading-template {
+    padding: 0rem;
+}
+
+#typora-sidebar .file-list-item,
+.ty-search-item {
+    border: none;
+    padding: 1rem;
+}
+
+body.html-for-mac #typora-sidebar .file-list-item,
+body.html-for-mac .ty-search-item {
+    transition-duration: 0.3s !important;
+    transition-property: background-color, border, color, height !important;
+}
+
+#typora-sidebar .file-list-item:hover,
+.ty-search-item:hover {
+    background: var(--borders);
+}
+
+#typora-sidebar .ty-search-item-line {
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin-left: 24px;
+}
+
+body.html-for-mac #typora-sidebar .ty-search-item-line {
+    transition-duration: 0.2s;
+}
+
+#typora-sidebar .ty-search-item-line * {
+    opacity: 1;
+}
+
+#typora-sidebar .ty-search-item .ty-search-item-line:hover,
+#typora-sidebar .ty-search-item-line.active {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+#typora-sidebar .file-list-item-file-name {
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+    line-height: 1.8rem;
+    float: right;
+}
+
+#typora-sidebar .file-list-item-file-ext-part {
+    font-weight: 800;
+    opacity: 0.5;
+}
+
+#typora-sidebar .file-list-item-parent-loc,
+#typora-sidebar .file-list-item-time {
+    font-family: var(--font-family);
+    font-weight: 400;
+    opacity: 0.5;
+    display: block;
+}
+
+#typora-sidebar .file-list-item-summary {
+    float: left;
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+#typora-sidebar input.file-list-item-file-name {
+    margin: 0.5rem 0rem 0.5rem 0.7rem;
+    padding: 0.4rem !important;
+    line-height: 1rem;
+    float: right;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    background-color: white !important;
+}
+
+#typora-sidebar .file-list-item-count {
+    font-size: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.2rem;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    text-align: center;
+    line-height: 1.25rem;
+    position: relative;
+    top: 0.3rem;
+}
+
+#typora-sidebar .file-list-item.file-library-file-node {
+    border: none;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-background,
+#typora-sidebar .file-list-item.active,
+#typora-sidebar .ty-search-item.active {
+    background-color: white;
+    outline: 1px solid var(--borders);
+    border: none;
+    color: var(--primary-color) !important;
+}
+
+#typora-sidebar .file-tree-node.active .file-node-content {
+    color: var(--primary-color) !important;
+}
+
+#typora-sidebar .file-tree-node {
+    padding: 0rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-left: 0.8rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-content {
+    padding: 0rem;
+    line-height: 2.2rem;
+    height: 2.2rem;
+    background: none;
+    margin-bottom: 0px;
+}
+
+#typora-sidebar .file-tree-node .file-node-background {
+    padding: 0rem;
+    height: 2.2rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon {
+    margin-right: 0.5rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-file-text-o {
+    margin-top: 0.33rem;
+}
+
+#typora-sidebar .file-tree-node .file-node-icon.fa-folder {
+    margin-top: 0.36rem;
+}
+
+#typora-sidebar .file-tree-node .fa-caret-down,
+#typora-sidebar .file-tree-node .fa-caret-right {
+    position: relative;
+    top: 5px;
+}
+
+#typora-sidebar .file-tree-node .file-tree-rename-input {
+    height: 2.2rem;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0rem;
+    padding-left: 0rem;
+}
+
+#typora-sidebar .ty-search-item-collapse-icon {
+    top: 9px;
+}
+
+/*no left border*/
+#typora-sidebar .file-tree-node.active > .file-node-background {
+    border: none;
+}
+
+/*no dotted highlighting*/
+.file-library-node:not(.file-node-root):focus > .file-node-content {
+    outline: none;
+}
+
+#typora-sidebar #sidebar-files-menu {
+    border: solid 1px var(--borders);
+    border-radius: 0.3rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+#typora-sidebar #ty-sidebar-footer {
+    background-color: var(--bg-color);
+    border-top: solid 1px var(--borders);
+    font-weight: 500;
+}
+
+#typora-sidebar #ty-sidebar-footer li {
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+}
+
+#typora-sidebar
+    #ty-sidebar-footer
+    li:not(.file-sort-item):not(:first-child):not(.empty-menu-group):not(.folder-menu-group):hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+#typora-sidebar
+    #ty-sidebar-footer
+    .file-action-item.file-sort-item
+    > span:first-of-type {
+    line-height: 2rem;
+}
+
+/*cursor*/
+.file-node-content:hover {
+    cursor: pointer;
+}
+
+body.html-for-mac
+    .file-tree-node:not(.file-node-root):not(.file-node-expanded)
+    .file-node-background {
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.file-tree-node:not(.file-node-root):not(.file-node-expanded):hover
+    .file-node-background {
+    background-color: var(--borders);
+}
+
+#typora-sidebar .sidebar-footer-item {
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+    font-weight: 700;
+}
+
+#typora-sidebar .sidebar-footer-item:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
 }
 
 #typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
+    background-color: white;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 0rem;
+    box-shadow: rgba(116, 129, 141, 0.15) 0px 3px 16px 0px;
+    overflow: hidden;
 }
 
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
+#typora-quick-open-input {
+    margin-right: 20px;
+}
+
+#typora-quick-open-input .input {
+    box-shadow: none !important /*required*/;
+    border: none !important /*required*/;
+    font-weight: 400 !important /*required*/;
+    margin: 0.5rem;
+    margin-left: 0.8rem;
+}
+
+.typora-quick-open-item {
+    background-color: white;
+    border: none;
+    font-weight: 500;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.typora-quick-open-item:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+.typora-quick-open-item.active {
+    background-color: var(--boxes);
+    border: none;
+}
+
+.typora-quick-open-item-path {
+    opacity: 1;
+    color: var(--light-text-color);
+}
+
+.typora-quick-open-item:hover .typora-quick-open-item-path {
+    opacity: 0.7;
+    color: var(--primary-color);
+}
+
+.ty-quick-open-category-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    opacity: 1;
+    color: var(--light-text-color);
+    line-height: 32px;
+    padding-top: 6px;
+    height: 32px;
 }
 
 /** focus mode */
@@ -621,49 +1741,1029 @@ code {
     border-left-color: rgba(85, 85, 85, 0.12);
 }
 
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
-
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
-}
-
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
-}
-
 .md-lang {
-    color: #b4654d;
+    color: var(--primary-color);
 }
 
-/*.html-for-mac {
-    --item-hover-bg-color: #E6F0FE;
-}*/
+/*NOTIFICATION*/
 
-#md-notification .btn {
+#md-notification {
+    border-bottom: solid 1px var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+#md-notifcation .btn {
     border: 0;
 }
 
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
+/*PREFERENCES*/
+
+.ty-preferences {
+    font-family: var(--font-family);
 }
 
+.ty-preferences .window-header {
+    justify-content: space-between;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    border-bottom: solid 1px var(--borders);
+}
+
+.ty-preferences .window-header-content {
+    background-color: white;
+    margin: 0rem;
+}
+
+.ty-preferences .window-header h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0rem;
+    margin-left: 1rem;
+}
+
+.unibody-window .ty-preferences .window-header h2 {
+    margin-left: 1rem !important;
+}
+
+.ty-preferences .window-header-back {
+    margin-left: 1.2rem;
+}
+
+.ty-preferences .window-header-back .icon {
+    border-right: none;
+}
+
+/*preferences sidebar*/
 .ty-preferences .window-content {
-    background-color: #fafafa;
+    background-color: white;
+}
+
+.ty-preferences .nav-group-item {
+    color: var(--text-color);
+    height: 2.5rem;
+    line-height: 2.6rem;
+    font-weight: 500;
+    padding: 0px 0px 0px 2rem;
+    font-size: 1rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.ty-preferences .nav-group-item:hover {
+    background-color: var(--borders);
+    border-radius: 0px;
 }
 
 .ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
+    border-radius: 0rem;
+    border: none;
+    outline: 1px solid var(--borders);
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.ty-preferences .pane-sm {
+    background: var(--boxes);
+    flex-basis: 240px;
+    flex-grow: 0;
+    justify-content: center;
+    border-right: 1px solid var(--borders);
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.ty-preferences .pane-sm .list-group {
+    width: 100%;
+    max-width: 30rem;
+}
+
+.ty-preferences .list-group-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ty-preferences .list-group-header div {
+    width: 100%;
+    margin-right: 18px;
+    margin-left: 18px;
+}
+
+.ty-preferences .pane-sm .search-input {
+    margin: 0rem !important;
+    width: 100%;
+    font-size: 1rem !important;
+    height: 2.75rem;
+}
+
+.ty-preferences .pane-sm .search-input:active,
+.ty-preferences .pane-sm .search-input:focus {
+    border: solid 1px var(--primary-color) !important;
+    outline: none;
+}
+
+/*preferences main*/
+.ty-preferences .panel-header {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/*preferences stuff*/
+.ty-preferences .dropdown-menu > li,
+.dropdown-item {
+    font-weight: 500;
+    font-size: 1rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.ty-preferences .dropdown-menu .active,
+.ty-preferences .dropdown-menu li:hover,
+.dropdown-item:hover {
+    background-color: var(--boxes);
+    color: var(--primary-color);
+}
+
+#ty-spell-check-dict-missing-secondary-btn:hover {
+    color: var(--primary-color) !important;
+}
+
+.header-close .icon {
+    border: none !important;
+}
+
+/*preferences export*/
+
+.export-detail {
+    background-color: transparent !important /*required*/;
+}
+
+.export-items-list .separator {
+    margin: 0.4rem;
+    border-top: 1px solid var(--borders);
+}
+
+.export-items-list-control {
+    background-color: var(--boxes) !important /*required*/;
+}
+
+.export-item {
+    padding: 0.4rem !important /*required*/;
+    color: var(--light-text-color-darker);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.export-item.active {
+    background-color: transparent !important /*required*/;
+    color: var(--primary-color);
+    font-weight: 500 !important /*required*/;
+}
+
+/*DROPDOWN*/
+
+.dropdown-menu:not(.megamenu-menu-list),
+.auto-suggest-container {
+    background-color: var(--bg-color);
+    border: solid 1px var(--borders) !important;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    user-select: none;
+}
+
+.dropdown-menu > li > a,
+.auto-suggest-container li {
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > li > a:hover,
+.menu-style-btn.active,
+.auto-suggest-container li:hover,
+.context-menu.dropdown-menu > .active > a,
+.context-menu.dropdown-menu > li > a:hover,
+.auto-suggest-container li.active {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+.menu-style-btn {
+    color: var(--text-color);
+    border: none;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+.menu-style-btn:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+    border: none;
+}
+
+header .menu-style-btn:hover {
+    background-color: transparent;
+}
+
+.menu-item-container {
+    padding: 0 12px 0 4px;
 }
 
 .menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+    padding: 0.3rem 0.6rem;
+    margin: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: var(--borders);
+    opacity: 1;
+}
+
+/*BUTTON*/
+
+.btn,
+button {
+    border: none !important;
+    border-radius: 0.3rem !important;
+    color: var(--text-color) !important;
+    transition-duration: 0.2s;
+    transition-property: all;
+    font-size: 0.9rem !important;
+    font-weight: 500;
+    outline: none;
+}
+
+.btn-default {
+    border: none !important;
+    border-radius: 0.3rem !important;
+    background-color: var(--boxes) !important;
+}
+
+.btn:hover,
+.button-hover {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--borders) !important;
+    color: var(--text-color);
+}
+
+button:active,
+button.active,
+.btn:active,
+.btn-default:active {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--boxes-darker) !important;
+    box-shadow: none;
+    outline: none;
+    color: var(--text-color);
+}
+
+.btn:focus {
+    border: none !important;
+    outline: none !important;
+    background-color: var(--boxes-darker);
+}
+
+.btn-primary {
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    color: white;
+    background-color: var(--primary-color-darker) !important;
+}
+
+.btn.dropdown-toggle-split,
+.btn.dropdown-toggle-split:hover {
+    border-radius: 0rem 0.3rem 0.3rem 0rem !important;
+}
+
+#ty-spell-check-dict-missing-primary-btn {
+    border-radius: 0.3rem 0rem 0rem 0.3rem !important;
+}
+
+.open > .dropdown-toggle.btn-primary {
+    background-color: var(--primary-color);
+    border-color: transparent;
+}
+
+/*GHOST BUTTON*/
+
+.window-header button,
+#close-sidebar-menu-btn,
+.html-for-mac .sidebar-tab-btn,
+.label-hint,
+.ty-table-edit .btn,
+.zoom-hint-button,
+.md-rawblock-tooltip-btn,
+.md-delete-toc,
+#md-searchpanel .input-group-addon.btn,
+#pin-outline-btn,
+.icon-button {
+    background-color: transparent !important;
+    color: var(--light-text-color) !important;
+    opacity: 1 !important;
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+.window-header button:hover,
+.window-header button:focus,
+#close-sidebar-menu-btn:hover,
+#close-sidebar-menu-btn:focus,
+.html-for-mac .sidebar-tab-btn:hover,
+.html-for-mac .sidebar-tab-btn:focus,
+.label-hint:hover,
+.label-hint:focus,
+.ty-table-edit .btn:hover,
+.ty-table-edit .btn:focus,
+.zoom-hint-button:hover,
+.zoom-hint-button:focus,
+.md-rawblock-tooltip-btn:hover,
+.md-rawblock-tooltip-btn:focus,
+.md-delete-toc:hover,
+.md-delete-toc:focus,
+#md-searchpanel .input-group-addon.btn:hover,
+#md-searchpanel .input-group-addon.btn:focus,
+#pin-outline-btn:hover,
+#pin-outline-btn:focus,
+.icon-button:hover,
+.icon-button:focus {
+    color: var(--primary-color) !important;
+    background: none !important;
+}
+
+.ty-table-edit .btn.active {
+    color: var(--primary-color) !important;
+    box-shadow: none;
+}
+
+/*IMAGE BUTTON*/
+
+.md-image-btn {
+    background-color: var(--boxes);
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.md-image-btn:before {
+    color: var(--text-color);
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+.md-image-btn:hover {
+    background-color: var(--borders);
+}
+
+.md-image-btn:hover:before {
+    color: var(--primary-color);
+}
+
+.md-image-input-src-btn {
+    border-radius: 0.3rem 0rem 0rem 0.3rem !important;
+}
+
+.md-image-pick-file-btn {
+    border-left: none;
+    border-radius: 0rem 0.3rem 0.3rem 0rem !important;
+}
+
+/*SEARCH-INPUTS*/
+
+.search-input,
+.search,
+.form-control,
+#file-library-search-input {
+    background-color: transparent !important;
+    border-radius: 0.3rem !important;
+    border: solid 1px var(--boxes-darker) !important;
+    box-shadow: none !important;
+    color: var(---heading-text-color) !important;
+    font-size: 0.9rem !important;
+    font-weight: 400;
+    padding: 0.7rem !important;
+    height: 2rem;
+    transition-duration: 0.2s;
+    transition-property: border, box-shadow;
+}
+
+.search-input:hover,
+.search:hover,
+.form-control:hover,
+#file-library-search-input:hover {
+    border: solid 1px var(--boxes-darker2) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+.search-input:focus,
+.search:focus,
+.form-control:focus,
+#file-library-search-input:focus {
+    background-color: transparent !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+    color: var(--heading-text-color) !important;
+    font-size: 0.9rem !important;
+    padding: 0.7rem !important;
+}
+
+.search-input::placeholder,
+.search::placeholder,
+.form-control::placeholder,
+#file-library-search-input::placeholder {
+    color: var(--light-text-color-darker) !important;
+}
+
+.clear-btn-icon {
+    top: 9px !important /*required*/;
+    right: 9px !important /*required*/;
+}
+
+.content tr.search-hit,
+.search-hit,
+.md-search-hit,
+.md-search-hit.md-search-select,
+.md-search-select,
+.ty-file-search-match-text {
+    background-color: var(--boxes-darkest);
+    color: white;
+    padding: 0.2rem 0.1rem;
+    border-radius: 0.2rem;
+}
+
+/*ZOOM HINT*/
+
+#zoom-hint {
+    border-radius: 0.3rem;
+    border: solid 1px var(--borders);
+    user-select: none;
+    box-shadow: rgba(116, 129, 141, 0.08) 0px 2px 6px 0px;
+}
+
+#zoom-hint #zoom-hint-reset {
+    border-left: none;
+    font-weight: 600;
+}
+
+/*SEARCHPANEL*/
+
+#md-searchpanel {
+    border-bottom: 1px solid var(--borders);
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+    max-height: 46px;
+}
+
+.mac-seamless-mode #md-searchpanel {
+    max-height: 70px;
+}
+
+#md-searchpanel.searchpanel-replace-mode {
+    max-height: 84px;
+}
+
+.mac-seamless-mode #md-searchpanel.searchpanel-replace-mode {
+    max-height: 108px;
+}
+
+#md-searchpanel input {
+    height: 2rem;
+    margin: 0rem !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+}
+
+#md-searchpanel .input-group-addon {
+    height: 2rem;
+}
+
+#md-searchpanel .input-group-addon.close-btn {
+    padding-left: 8px;
+}
+
+.unibody-window #md-searchpanel .btn {
+    line-height: 2rem;
+}
+
+.searchpanel-search-option-btn {
+    top: 9px;
+    border: none;
+    color: var(--light-text-color-darker) !important /*required*/;
+    transition-duration: 0.3s;
+}
+
+.searchpanel-search-option-btn:hover {
+    color: var(--primary-color) !important /*required*/;
+    background-color: transparent !important /*required*/;
+}
+
+.searchpanel-search-option-btn.select,
+.searchpanel-search-option-btn.active {
+    color: white !important;
+    background-color: var(--primary-color) !important;
+}
+
+#searchpanel-case-option-btn {
+    right: 33px;
+}
+
+#searchpanel-word-option-btn {
+    right: 9px;
+}
+
+#searchpanel-word-option-btn,
+#searchpanel-case-option-btn {
+    background: none;
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+}
+
+/*SELECT*/
+/*TEXT INPUT*/
+/*NUMBER INPUT*/
+
+/* the input #md-grid-height doesn't have a type attached for some reason and needs to be adressed seperately */
+
+html select,
+html input[type="text"],
+html input[type="number"],
+#md-grid-height {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border: solid 1px var(--boxes-darker) !important;
+    box-shadow: none !important;
+    color: var(--text-color) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    padding: 0.3rem !important;
+    height: 2.1rem !important;
+    transition-duration: 0.2s;
+    transition-property: border;
+    cursor: text;
+}
+
+select {
+    cursor: pointer !important;
+}
+
+input[type="text"],
+input[type="number"] {
+    cursor: text;
+}
+
+html select:hover,
+html input[type="text"]:hover,
+html input[type="number"]:hover,
+#md-grid-height:hover {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border-color: var(--boxes-darker2) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+    color: var(--text-color) !important;
+    font-size: 0.9rem !important;
+}
+
+html select:focus,
+html input[type="text"]:focus,
+html input[type="number"]:focus,
+#md-grid-height:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+#md-grid-height::placeholder {
+    color: var(--light-text-color-darker) !important;
+}
+
+input[disabled],
+input[disabled]:hover,
+input[disabled]:focus {
+    cursor: not-allowed;
+}
+
+/*TEXTAREA*/
+
+textarea {
+    background-color: transparent;
+    border: solid 1px var(--boxes-darker);
+    border-radius: 0.3rem;
+    transition-duration: 0.2s;
+}
+
+textarea:hover {
+    border-color: var(--boxes-darker2);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    outline: none;
+}
+
+/*MODAL*/
+
+.modal-header,
+#common-dialog .modal-header {
+    border-bottom: solid 1px var(--borders);
+    padding-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    user-select: none;
+}
+
+.modal-body {
+    font-size: 0.9rem;
+    color: var(--light-text-color-darker);
+    user-select: none;
+}
+
+.modal-content {
+    box-shadow: rgba(116, 129, 141, 0.15) 0px 3px 10px 0px;
+    border: solid 1px var(--boxes-darker);
+    border-radius: 0.3rem;
+}
+
+.modal-footer {
+    border-top: solid 1px var(--borders);
+}
+
+.modal-open .modal.fade.in {
+    background: none;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/*LANGS*/
+
+.ty-spell-check-panel-item {
+    font-weight: 500;
+    transition-duration: 0.2s;
+    transition-property: background-color, color;
+}
+
+.ty-spell-check-panel-item:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes);
+}
+
+.ty-spell-check-panel-item.ty-active {
+    background-color: var(--boxes);
+}
+
+/*TOOLTIP*/
+
+.ty-tooltip {
+    background-color: var(--bg-color) !important;
+    border-radius: 0.3rem !important;
+    border: 1px solid var(--borders) !important;
+    -webkit-filter: none !important;
+    filter: none;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+}
+
+/*FOOTER*/
+
+.footer-item:hover {
+    background-color: var(--boxes) !important;
+}
+
+#footer-word-count-info {
+    padding: 4px 0;
+}
+
+.footer-word-count-info-line {
+    padding: 0.25rem;
+    line-height: 1.6rem;
+}
+
+#footer-word-count-info tr {
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+#footer-word-count-info tr td:nth-child(1) {
+    padding: 0rem;
+    padding-right: 1rem;
+}
+
+#footer-word-count-info .ty-footer-word-count-all tr:hover {
+    color: var(--primary-color) !important;
+    background-color: var(--boxes) !important;
+}
+
+/*MEGAMENU*/
+
+.megamenu-menu {
+    box-shadow: none;
+    background-color: var(--boxes);
+    border-right: 1px solid var(--borders);
+}
+
+.megamenu-opened .megamenu-menu {
+    left: 0px;
+}
+
+#megamenu-content {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#megamenu-menu-list {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+}
+
+#megamenu-menu-list li a {
+    color: var(--text-color);
+    height: 2rem;
+    line-height: 1.8rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+#megamenu-menu-list li a:hover {
+    background-color: var(--borders);
+}
+
+#megamenu-menu-list li a.active {
+    color: var(--primary-color);
+    background-color: white;
+    outline: solid 1px var(--borders);
+}
+
+#megamenu-menu-list .divider {
+    background-color: var(--borders);
+    margin: 16px 0 0 0;
+}
+
+.megamenu-menu-list .saved #m-saved {
+    cursor: default;
+}
+
+.megamenu-menu-list .saved #m-saved .fa {
+    color: var(--primary-color);
+}
+
+.megamenu-menu-list .saved #m-saved:hover {
+    background-color: transparent;
+}
+
+.megamenu-menu-list #m-close:hover {
+    color: var(--danger-color);
+}
+
+.megamenu-menu-header {
+    border-bottom: solid 1px var(--borders);
+    margin-bottom: 1.2rem;
+    height: 74px;
+    transition-duration: 0.3s;
+}
+
+.megamenu-menu-header:hover {
+    background-color: var(--borders);
+}
+
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 16px;
+    left: 56px;
+    top: 24px;
+}
+
+#megamenu-back-btn {
+    color: var(--text-color);
+    font-size: 16px;
+    left: 24px;
+    top: 24px;
+}
+
+.megamenu-opened header {
+    background-color: var(--bg-color);
+    background-image: none;
+}
+
+.megamenu-content {
+    background-color: var(--bg-color);
+    background-image: none;
+}
+
+.megamenu-menu-panel:not(:first-of-type) {
+    margin-top: 2rem;
+}
+
+.megamenu-menu-panel h1 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin: 1rem 0rem 0.4rem 0rem;
+}
+
+.megamenu-menu-panel h2 {
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin: 1rem 0rem 0.4rem 0rem;
+}
+
+/*recent files*/
+
+#recent-file-panel tbody tr {
+    font-weight: 600;
+    transition-duration: 0.4s;
+}
+
+#recent-file-panel tbody tr:hover,
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: var(--primary-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: var(--boxes);
+}
+
+/*about help*/
+
+.about-content-slogon {
+    color: var(--light-text-color);
+}
+
+/*for the god himself*/
+.about-content-slogon span {
+    color: var(--primary-color) !important;
+}
+
+#about-content tbody tr {
+    font-weight: 500;
+    transition-duration: 0.4s;
+}
+
+#about-content tbody tr:hover {
+    color: var(--primary-color);
+    background-color: var(--boxes) !important /*required important*/;
+}
+
+.long-btn {
+    margin-bottom: 12px;
+    margin-left: 2px;
+    box-shadow: rgba(116, 129, 141, 0.1) 2px 2px 6px;
+    background-color: white;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    font-weight: 700;
+    font-size: 1rem;
+
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.long-btn:hover {
+    background-color: var(--primary-color);
+    border: 1px solid transparent;
+    color: white !important /*important required*/;
+    box-shadow: rgba(116, 129, 141, 0.1) 2px 2px 6px,
+        rgba(26, 168, 139, 0.2) 0px 0px 10px;
+}
+
+#m-import-local:hover .preference-item-hint {
+    color: white;
+    opacity: 0.7;
+}
+
+#recent-file-panel-action-btn {
+    height: 34px;
+    border: none;
+    background-color: var(--boxes);
+}
+
+#theme-preview-grid {
+    max-width: none;
+    padding: 1.5rem;
+    background-color: var(--boxes);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.theme-preview-div {
+    border: none;
+    border-radius: 0.4rem;
+    box-shadow: rgba(116, 129, 141, 0.1) 0px 0px 15px;
+    margin: 0rem;
+    transition-duration: 0.3s;
+}
+
+.theme-preview-div:hover {
+    box-shadow: rgba(116, 129, 141, 0.5) 3px 8px 15px;
+    cursor: pointer;
+    transform: rotate3d(1, -0.2, 0.2, 15deg);
+}
+
+.theme-preview-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.4rem;
+}
+
+.theme-preview-content html {
+    width: 100%;
+    height: 100%;
+}
+
+.theme-preview-div.active .fa {
+    color: var(--primary-color);
+    bottom: 4px;
+    left: 4px;
+}
+
+.theme-preview-div .fa-check-circle:before {
+    background-color: var(--bg-color);
+    padding: 0px 2px;
+    border-radius: 1rem;
+}
+
+.megamenu-menu-panel tbody tr {
+    border-radius: 0.3rem;
+    transition-duration: 0.2s;
+    transition-property: background-color;
+}
+
+.megamenu-menu-panel tbody tr:hover {
+    background-color: var(--borders) !important /*required important*/;
+}
+
+/*MIN MAX CLOSE*/
+#w-min,
+#w-max,
+#w-restore,
+#w-close {
+    border-radius: 0px !important;
+    font-size: 10px !important;
+    width: 46px !important;
+    height: 29px !important;
+}
+
+.btn.toolbar-icon svg,
+.btn.toolbar-icon .ty-icon {
+    position: relative;
+    top: 2px;
+}
+
+#w-close.btn.toolbar-icon .ty-icon {
+    left: 1px;
+}
+
+#w-close:hover {
+    background-color: var(--danger-color) !important;
+    color: white !important;
+}
+
+/*EXTRA STUFF*/
+
+a[type="page-link"] {
+    display: block;
+    background-color: white;
+    box-shadow: rgba(116, 129, 141, 0.2) 0px 3px 8px 0px;
+    border: 1px solid var(--borders);
+    border-radius: 0.3rem;
+    padding: 1rem;
+
+    font-weight: 600;
+
+    transition-duration: 0.2s;
+    transition-property: border, box-shadow;
+}
+
+a[type="page-link"]:hover {
+    box-shadow: rgba(116, 129, 161, 0.1) 0px 3px 8px 0px;
+    border: 1px solid var(--primary-color);
+}
+
+p[type="description"] {
+    color: var(--light-text-color);
+}
+
+/*kbd*/
+
+kbd {
+    font-family: var(--font-family);
 }
 
 
@@ -671,6 +2771,6 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>README</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='jupyter4dice'><span>Jupyter4DICe</span></h1><p><em><span>This project is maintained by </span><a href='https://marcoalopez.github.io/'><span>Marco A. Lopez-Sanchez</span></a></em><span> - Last update: 2022/08/25</span></p><blockquote><p><span>🚨 This project is in development stage and most Jupyter notebooks are not yet finished (unless otherwise indicated).</span></p></blockquote><h2 id='what-is-this'><span>What is this?</span></h2><p><a href='https://github.com/marcoalopez/Jupyter4DICe'><span>Jupyter4DICe</span></a><span> is a series of </span><a href='https://jupyter.org/'><span>Jupyter notebooks</span></a><span> written in Python for post-processing digital image correlation (DIC) data obtained with the open-source digital image correlation </span><a href='https://github.com/dicengine/dice'><span>DICe tool</span></a><span>. Although the DICe tool already produces a file that can be viewed directly with an application called Paraview, the use of Jupyter notebooks has two main advantages over this approach:</span></p><ul><li><span>it is more versatile</span></li><li><span>it allows you to record and detail all post-processing steps, which is advantageous for reproducibility. For example, this allows you to create a complete step-by-step report that you can use as supplementary material in your scientific publications.</span></li></ul><p><span>These notebooks assume that the user is familiar with basic Python concepts (data types, loops, conditionals, functions, modules), and the Numpy (particularly multidimensional array indexing) and Matplotlib (for plotting) libraries. The goal of these notebooks is to keep dependencies to a minimum, only using well-established Python libraries, to avoid future compatibility problems. All ad hoc methods used for the DIC data treatment are contained within the notebooks.</span></p><h3 id='the-notebooks'><span>The notebooks</span></h3><p><span>To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)</span></p><ul><li><a href='https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb'><span>Loading data from DICe output</span></a><span> (Done) / </span><a href='https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb'><span>View on Deepnote</span></a></li><li><a href='https://github.com/marcoalopez/Jupyter4DICe/blob/4107e0e8483b9d72ae1e5693b360097c099540b7/notebooks/Strain_analysis.ipynb'><span>Visualizing and assessing strain</span></a><span> (working on it!) / </span><a href='https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb'><span>View on Deepnote</span></a></li><li><a href='https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/24dc818212c3b12139f421712aa60f1572298ad2/notebooks/Displacement_analysis.ipynb'><span>Visualizing and assessing displacements</span></a><span> (working on it!) / </span><a href='https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Displacement_analysis.ipynb'><span>View on Deepnote</span></a></li><li><a href='https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true'><span>How to assess and visualise the quality of the DIC solution and clean the dataset</span></a><span> (TODO!)</span></li></ul><h2 id='faqs'><span>FAQs</span></h2><h3 id='what-is-digital-image-correlation'><span>What is digital image correlation?</span></h3><p><span>Digital image correlation is an image-based method that uses digital image recording and tracking techniques to make accurate 2D (or 3D) full-field measurements during the deformation of a sample. Tracking coordinate fields allows the user to estimate different parameters of interest such as </span><a href='https://en.wikipedia.org/wiki/Displacement_field_(mechanics)'><span>displacement</span></a><span> (motion), </span><a href='https://en.wikipedia.org/wiki/Strain_(materials_science)'><span>strains</span></a><span>, strain rates, particle velocities, etc. The technique is non-contact, usually inexpensive, and can be applied at virtually any scale (from </span><a href='https://doi.org/10.1016/j.actamat.2020.05.029'><span>nanometric</span></a><span> to </span><a href='https://doi.org/10.1007/s11340-014-9893-z'><span>plate tectonic</span></a><span> scales), becoming increasingly common in many areas of science and engineering. In mechanical tests, the amount of information collected compared to </span><a href='https://en.wikipedia.org/wiki/Strain_gage'><span>strain gauges</span></a><span> such as extensometers is increased due to the ability to provide both local (full field) and average (mean field) information. More information on DIC at </span><a href='https://www.idics.org/' target='_blank' class='url'>https://www.idics.org/</a></p><h3 id='what-is-a-jupyter-notebook-and-how-to-use-it'><span>What is a Jupyter notebook and how to use it?</span></h3><p><span>A Jupyter notebook is a document that supports mixing executable code ( </span><strong><span>Ju</span></strong><span>lia, </span><strong><span>Pyt</span></strong><span>hon, </span><strong><span>R</span></strong><span>, etc.), equations, visualizations, and narrative text, known as </span><a href='https://osf.io/h9gsd/'><span>literate computing</span></a><span>. There are two main options to interact with a Jupyter notebook:</span></p><ul><li><span>Open the notebook locally on your computer, i.e. the notebook is stored on your hard disk. This is the fastest way to open and interact with a notebook and always have access to it. This requires, however, installing a Python distribution that includes Jupyter and several Python scientific libraries (see </span><em><span>Requirements &amp; Python installation</span></em><span> below) and download the notebooks. </span><em><span>A link to download all the notebooks will be available soon!</span></em></li><li><span>Open the notebook on remote servers as a web application (e.g. in </span><a href='https://mybinder.org/'><span>mybinder.org</span></a><span> or </span><a href='https://colab.research.google.com/'><span>Google Colab</span></a><span>). The process of loading the notebook in this way can be quite slow, depending on its size, but it has the advantage of requiring nothing more than a browser and an internet connection. </span><em><span>More details on this modality coming soon!</span></em></li></ul><p><span>Lastly, there are exceptional Jupyter notebook video tutorials on the web (others not so much). For example, this one here </span><a href='https://www.youtube.com/watch?v=HW29067qVWk' target='_blank' class='url'>https://www.youtube.com/watch?v=HW29067qVWk</a></p><h3 id='requirements--python-installation'><span>Requirements &amp; Python installation</span></h3><p><span>A popular software distribution that includes the Jupyter notebook is the </span><a href='https://www.anaconda.com/products/individual'><span>Anaconda distribution (individual edition)</span></a><span>, which is free, includes all the necessary scientific packages (&gt; 5 GB disk space), and is ready to install on Windows, Mac, and Linux. Pick the installer with the newest version of Python and voila! Another option is to install </span><a href='https://docs.conda.io/en/latest/miniconda.html'><span>Miniconda</span></a><span>, which is a free minimal Python &amp; Conda installation. If you are not sure whether you should install it, read </span><a href='https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda'><span>this</span></a><span>. If you installed Miniconda, open the </span><em><span>Anaconda prompt</span></em><span> and use the following command to install the minimum necessary dependencies to interact locally with the notebooks.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="shell"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="shell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.52344px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&gt;&gt;&gt; conda install numpy pandas matplotlib scipy jupyter ipython jupyterlab astropy </span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>Jupyter notebooks can be launched from the terminal (</span><em><span>Anaconda prompt</span></em><span>) typing </span><code>jupyter lab</code><span> or  </span><code>jupyter notebook</code><span>. Also, by open the Anaconda navigator (if you installed Anaconda) and launching the </span><em><span>Jupyter lab</span></em><span> or the </span><em><span>Jupyter notebook</span></em><span>. Then, you&#39;ll see the application opening in your browser. If you prefer a standalone application to interact with the notebooks you can install </span><a href='https://code.visualstudio.com/' target='_blank' class='url'>https://code.visualstudio.com/</a><span>, which is completely free, and add the </span><em><span>Python</span></em><span> and </span><em><span>Jupyter</span></em><span> plug-ins.</span></p><h3 id='how-to-contribute-to-this-project'><span>How to contribute to this project?</span></h3><p><span>The GitHub website hosting the project provides several options (you will need a GitHub account, it’s free!):</span></p><ul><li><p><span>Open a </span><a href='https://github.com/marcoalopez/Jupyter4DICe/discussions'><span>discussion</span></a><span>: This is a place to:</span></p><ul><li><span>Ask questions you are wondering about.</span></li><li><span>Share ideas.</span></li><li><span>Engage with the developers (still just me).</span></li></ul></li><li><p><span>Open and </span><a href='https://github.com/marcoalopez/Jupyter4DICe/issues'><span>issue</span></a><span>: This is a place to track bugs or requests for specific features on the notebooks.</span></p></li><li><p><span>Create a </span><a href='https://github.com/marcoalopez/Jupyter4DICe/pulls'><span>pull request</span></a><span>: You modified, corrected or added a feature to one of the notebooks and send it for one of the developers to review it and add it to the main page.</span></p></li></ul><p><span>For a quick explanation see </span><a href='https://www.youtube.com/watch?v=R8OAwrcMlRw' target='_blank' class='url'>https://www.youtube.com/watch?v=R8OAwrcMlRw</a><span>. Besides, if you want to contribute to the project, you might want to glimpse at the </span><a href='https://github.com/marcoalopez/Jupyter4DICe/blob/main/CODE_OF_CONDUCT.md'><span>code of conduct</span></a><span> (TLDR: be nice to others 😉).</span></p><h3 id='is-the-dice-tool-required-to-use-the-notebooks'><span>Is the DICe tool required to use the notebooks?</span></h3><p><span>Not necessarily. We encourage the use of this software because it is free and open-source and allows the whole process to be traceable and reproducible, but the data processing shown in the notebooks is generally applicable. You would only need to import the data from the output files of your DIC software of choice.</span></p><hr /><p><em><span>Copyright © 2022 Marco A. Lopez-Sanchez</span></em><span>  </span></p><p><em><span>Information presented on this website and the notebooks is provided without any express or implied warranty and may include technical inaccuracies or typing errors; the author reserve the right to modify or enhance the content of this website as well as the notebooks at any time without previous notice. This webpage and the notebooks are not liable for the content of external links. Notebook contents under </span><a href='https://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution license CC-BY 4.0</span></a><span> and codes under </span><a href='https://www.mozilla.org/en-US/MPL/2.0/'><span>Mozilla Public License 2.0</span></a><span>.</span></em></p><p><em><span>Hosted on GitHub Pages — This website was created with </span><a href='https://typora.io/'><span>Typora</span></a></em></p><p>&nbsp;</p></div></div>
+<div id='write'  class=''><h1 id='jupyter4dice'><span>Jupyter4DICe</span></h1><p><em><span>This project is maintained by </span><a href='https://marcoalopez.github.io/'><span>Marco A. Lopez-Sanchez</span></a></em><span> - Last update: 2022/11/01</span></p><blockquote><p><span>🚨 This project is in development and the Jupyter notebooks are not yet finished although many of the examples contained are fully usable.</span></p></blockquote><h2 id='what-is-this'><span>What is this?</span></h2><p><a href='https://github.com/marcoalopez/Jupyter4DICe'><span>Jupyter4DICe</span></a><span> is a series of </span><a href='https://jupyter.org/'><span>Jupyter notebooks</span></a><span> written in Python for post-processing digital image correlation (DIC) data obtained with the open-source digital image correlation </span><a href='https://github.com/dicengine/dice'><span>DICe tool</span></a><span>. Although the DICe tool already produces a file that can be viewed directly with an application called Paraview, the use of Jupyter notebooks has two main advantages:</span></p><ul><li><span>it is more versatile</span></li><li><span>it allows you to record and detail all post-processing steps, which is advantageous for reproducibility. For example, this allows you to create a complete step-by-step report that you can use as supplementary material in your scientific publications.</span></li></ul><p><span>These notebooks assume that the user is familiar with basic Python concepts (data types, loops, conditionals, functions, modules), and the Numpy and Matplotlib libraries. The goal of these notebooks is to keep dependencies to a minimum to avoid future compatibility problems, using only well-manteined Python libraries. All </span><em><span>ad hoc</span></em><span> methods used for the DIC data treatment are contained within the notebooks.</span></p><h3 id='the-notebooks'><span>The notebooks</span></h3><p><span>To visualize the content of the notebooks as a website just click on the topic you are interested in (the list may increase or decrease without notice over time)</span></p><ul><li><a href='https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb'><span>Loading data from DICe output</span></a><span> (Done) / </span><a href='https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/LoadingDICe_data.ipynb'><span>View on Deepnote</span></a></li><li><a href='https://github.com/marcoalopez/Jupyter4DICe/blob/4107e0e8483b9d72ae1e5693b360097c099540b7/notebooks/Strain_analysis.ipynb'><span>Visualizing and assessing strain</span></a><span> (working on it!) / </span><a href='https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb'><span>View on Deepnote</span></a></li><li><a href='https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/24dc818212c3b12139f421712aa60f1572298ad2/notebooks/Displacement_analysis.ipynb'><span>Visualizing and assessing displacements</span></a><span> (working on it!) / </span><a href='https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Displacement_analysis.ipynb'><span>View on Deepnote</span></a></li><li><a href='https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true'><span>How to assess and visualise the quality of the DIC solution and clean the dataset</span></a><span> (TODO!)</span></li></ul><h2 id='faqs'><span>FAQs</span></h2><h3 id='what-is-digital-image-correlation'><span>What is digital image correlation?</span></h3><p><span>Digital image correlation is an image-based method that uses digital image recording and tracking techniques to make accurate 2D (or 3D) full-field measurements during the deformation of a sample. Tracking coordinate fields allows the user to estimate different parameters of interest such as </span><a href='https://en.wikipedia.org/wiki/Displacement_field_(mechanics)'><span>displacement</span></a><span> (motion), </span><a href='https://en.wikipedia.org/wiki/Strain_(materials_science)'><span>strains</span></a><span>, strain rates, particle velocities, etc. The technique is non-contact, usually inexpensive, and can be applied at virtually any scale (from </span><a href='https://doi.org/10.1016/j.actamat.2020.05.029'><span>nano</span></a><span> to </span><a href='https://doi.org/10.1007/s11340-014-9893-z'><span>kilometric</span></a><span> scales), becoming increasingly common in many areas of science and engineering. In mechanical tests, the amount of information collected compared to </span><a href='https://en.wikipedia.org/wiki/Strain_gage'><span>strain gauges</span></a><span> such as extensometers is increased due to the ability to provide both local (full field) and average (mean field) information. More useful information at </span><a href='https://www.idics.org/' target='_blank' class='url'>https://www.idics.org/</a></p><h3 id='what-is-a-jupyter-notebook-and-how-to-use-it'><span>What is a Jupyter notebook and how to use it?</span></h3><p><span>A Jupyter notebook is a document that supports mixing executable code ( </span><strong><span>Ju</span></strong><span>lia, </span><strong><span>Pyt</span></strong><span>hon, </span><strong><span>R</span></strong><span>, etc.), equations, visualizations, and narrative text, known as </span><a href='https://osf.io/h9gsd/'><span>literate computing</span></a><span>. There are two main options to interact with a Jupyter notebook:</span></p><ul><li><span>Open the notebook locally on your computer, i.e. the notebook is stored on your hard disk. This is the fastest way to open and interact with a notebook and always have access to it. This requires, however, installing a Python distribution that includes Jupyter and several Python scientific libraries (see </span><em><span>Requirements &amp; Python installation</span></em><span> below) and download the notebooks. </span><em><span>A link to download all the notebooks will be available soon!</span></em></li><li><span>Open the notebook on remote servers as a web application (e.g. in </span><a href='https://mybinder.org/'><span>mybinder.org</span></a><span> or </span><a href='https://colab.research.google.com/'><span>Google Colab</span></a><span>). The process of loading the notebook in this way can be quite slow, depending on its size, but it has the advantage of requiring nothing more than a browser and an internet connection. </span><em><span>More details on this modality coming soon!</span></em></li></ul><p><span>Lastly, there are exceptional Jupyter notebook video tutorials on the web (others not so much). For example, this one here </span><a href='https://www.youtube.com/watch?v=HW29067qVWk' target='_blank' class='url'>https://www.youtube.com/watch?v=HW29067qVWk</a></p><h3 id='requirements--python-installation'><span>Requirements &amp; Python installation</span></h3><p><span>A popular software distribution that includes the Jupyter notebook is the </span><a href='https://www.anaconda.com/products/individual'><span>Anaconda distribution (individual edition)</span></a><span>, which is free, includes all the necessary scientific packages (&gt; 5 GB disk space), and is ready to install on Windows, Mac, and Linux. Pick the installer with the newest version of Python and voila! Another option is to install </span><a href='https://docs.conda.io/en/latest/miniconda.html'><span>Miniconda</span></a><span>, which is a free minimal Python &amp; Conda installation. If you are not sure whether you should install it, read </span><a href='https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html#anaconda-or-miniconda'><span>this</span></a><span>. If you installed Miniconda, open the </span><em><span>Anaconda prompt</span></em><span> and use the following command to install the minimum necessary dependencies to interact locally with the notebooks.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="shell"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="shell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 26.7969px; left: 20px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&gt;&gt;&gt; conda install numpy pandas matplotlib scipy jupyter ipython jupyterlab astropy </span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><p><span>Jupyter notebooks can be launched from the terminal (</span><em><span>Anaconda prompt</span></em><span>) typing </span><code>jupyter lab</code><span> or  </span><code>jupyter notebook</code><span>. Also, by open the Anaconda navigator (if you installed Anaconda) and launching the </span><em><span>Jupyter lab</span></em><span> or the </span><em><span>Jupyter notebook</span></em><span>. Then, you&#39;ll see the application opening in your browser. If you prefer a standalone application to interact with the notebooks you can install </span><a href='https://code.visualstudio.com/' target='_blank' class='url'>https://code.visualstudio.com/</a><span>, which is completely free, and add the </span><em><span>Python</span></em><span> and </span><em><span>Jupyter</span></em><span> plug-ins.</span></p><h3 id='how-to-contribute-to-this-project'><span>How to contribute to this project?</span></h3><p><span>The GitHub website hosting the project provides several options (you will need a GitHub account, it’s free!):</span></p><ul><li><p><span>Open a </span><a href='https://github.com/marcoalopez/Jupyter4DICe/discussions'><span>discussion</span></a><span>: This is a place to:</span></p><ul><li><span>Ask questions you are wondering about.</span></li><li><span>Share ideas.</span></li><li><span>Engage with the developers (still just me).</span></li></ul></li><li><p><span>Open and </span><a href='https://github.com/marcoalopez/Jupyter4DICe/issues'><span>issue</span></a><span>: This is a place to track bugs or requests for specific features on the notebooks.</span></p></li><li><p><span>Create a </span><a href='https://github.com/marcoalopez/Jupyter4DICe/pulls'><span>pull request</span></a><span>: You modified, corrected or added a feature to one of the notebooks and send it for one of the developers to review it and add it to the main page.</span></p></li></ul><p><span>For a quick explanation see </span><a href='https://www.youtube.com/watch?v=R8OAwrcMlRw' target='_blank' class='url'>https://www.youtube.com/watch?v=R8OAwrcMlRw</a><span>. Besides, if you want to contribute to the project, you might want to glimpse at the </span><a href='https://github.com/marcoalopez/Jupyter4DICe/blob/main/CODE_OF_CONDUCT.md'><span>code of conduct</span></a><span> (TLDR: be nice to others 😉).</span></p><h3 id='is-the-dice-tool-required-to-use-the-notebooks'><span>Is the DICe tool required to use the notebooks?</span></h3><p><span>Not necessarily. We encourage the use of this software because it is free and open-source and allows the whole process to be traceable and reproducible, but the data processing shown in the notebooks is generally applicable. You would only need to import the data from the output files of your DIC software of choice.</span></p><hr /><p><em><span>Copyright © 2022 Marco A. Lopez-Sanchez</span></em><span>  </span></p><p><em><span>Information presented on this website and the notebooks is provided without any express or implied warranty and may include technical inaccuracies or typing errors; the author reserve the right to modify or enhance the content of this website as well as the notebooks at any time without previous notice. This webpage and the notebooks are not liable for the content of external links. Notebook contents under </span><a href='https://creativecommons.org/licenses/by/4.0/'><span>Creative Commons Attribution license CC-BY 4.0</span></a><span> and codes under </span><a href='https://www.mozilla.org/en-US/MPL/2.0/'><span>Mozilla Public License 2.0</span></a><span>.</span></em></p><p><em><span>Hosted on GitHub Pages — This website was created with </span><a href='https://typora.io/'><span>Typora</span></a></em></p><p>&nbsp;</p></div></div>
 </body>
 </html>
