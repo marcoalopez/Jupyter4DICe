@@ -1,7 +1,7 @@
 
-![](https://raw.githubusercontent.com/marcoalopez/Jupyter4DICe/main/imgs/header.webp)_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2023/01/25
+![](https://raw.githubusercontent.com/marcoalopez/Jupyter4DICe/main/imgs/header.webp)_This project is maintained by [Marco A. Lopez-Sanchez](https://marcoalopez.github.io/)_ - Last update: 2023/06/12
 
-> 🚨 This project is under continuous development and the examples of Jupyter notebooks may not be finished. Despite this, the examples they contain are fully usable.
+> 🚨 This project is under continuous development and the examples of Jupyter notebooks may not be finished. In any event, the examples they contain are fully usable.
 
 ## What is this?
 
@@ -20,6 +20,12 @@ To visualize the content of the notebooks as a website just click on the topic y
 - [Visualizing and assessing strain](https://github.com/marcoalopez/Jupyter4DICe/blob/4107e0e8483b9d72ae1e5693b360097c099540b7/notebooks/Strain_analysis.ipynb) (working on it!) / [View on Deepnote](https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Strain_analysis.ipynb)
 - [Visualizing and assessing displacements](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/24dc818212c3b12139f421712aa60f1572298ad2/notebooks/Displacement_analysis.ipynb) (working on it!) / [View on Deepnote](https://deepnote.com/viewer/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/Displacement_analysis.ipynb)
 - [How to assess and visualise the quality of the DIC solution and clean the dataset](https://nbviewer.jupyter.org/github/marcoalopez/Jupyter4DICe/blob/main/notebooks/assesing_quality.ipynb?flush_cache=true) (TODO!)
+
+If you have utilized the provided examples in these Jupyter notebooks as a foundation for processing your DIC data and intend to publish, we kindly ask to consider citing the following paper,  which outlines the complete protocol:
+
+> Lopez-Sanchez, M.A., Chauve, T., Montagnat, M., Tommasi, A., 2023. Decoupling between strain localisation and the microstructural record revealed by in-situ strain measurements in polycrystalline ice. Earth and Planetary Science Letters 611, 118149. https://doi.org/10.1016/j.epsl.2023.118149
+
+By acknowledging this paper, you provide proper credit to the authors and acknowledge their work as the basis for the methodology used in processing your DIC data.
 
 ## FAQs
 
